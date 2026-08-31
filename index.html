@@ -361,7 +361,7 @@
     <!-- جملة محبة -->
     <div class="love-message">
       <i class="fas fa-heart" style="color: #c48b3a;"></i> 
-      برسالة حبٍّ للغة الضاد، نرتقي معًا 
+      برسالة حبٍّ للغة الضاد، نرتقي معًا 
       <i class="fas fa-heart" style="color: #c48b3a;"></i>
     </div>
   </div>
@@ -390,20 +390,21 @@
     const tab2 = document.getElementById('tabSemester2');
     const tabContent = document.getElementById('tabContent');
 
-    // رابط الفصل الثاني (ثابت)
+    // روابط الفصلين (ثابتة)
+    const semester1Link = "https://omk811.github.io/Semester1/";
     const semester2Link = "https://omk811.github.io/Semester2/";
 
-    // دالة عرض محتوى الفصل الأول (قريباً)
+    // دالة عرض محتوى الفصل الأول (رابط مباشر)
     function renderSemester1() {
       tabContent.innerHTML = `
-        <div class="coming-soon-card">
-          <i class="fas fa-hourglass-half"></i>
-          <p>رابط الفصل الدراسي الأول</p>
-          <span style="color: #6b4f30; font-weight: 500; background: #f3e8d8; padding: 0.4rem 1.8rem; border-radius: 2rem;">
-            سيتم إضافته قريباً 🕌
-          </span>
-          <div style="margin-top: 0.8rem; font-size: 1rem; color: #7a623f;">
-            <i class="far fa-clock"></i> يُرجى المتابعة
+        <div class="coming-soon-card" style="gap: 1.6rem;">
+          <i class="fas fa-graduation-cap" style="color: #b68b3c;"></i>
+          <p style="font-size: 1.6rem;">دروس الفصل الدراسي الأول</p>
+          <a href="${semester1Link}" target="_blank" rel="noopener noreferrer" class="link-button">
+            <i class="fas fa-external-link-alt"></i> الانتقال إلى الدروس
+          </a>
+          <div style="font-size: 0.9rem; color: #5d4a2e; margin-top: 0.3rem;">
+            <i class="fas fa-mouse-pointer"></i> اضغط للدخول إلى محتوى الفصل الأول
           </div>
         </div>
       `;
@@ -443,9 +444,6 @@
 
     // تهيئة الصفحة بعرض الفصل الأول (نشط)
     renderSemester1();
-
-    // إضافة لمسة تفاعلية: لو المستخدم ضغط التبويب الثاني يظهر الرابط
-    // (كل شيء جاهز)
   </script>
 </body>
 </html>
